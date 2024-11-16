@@ -1,0 +1,630 @@
+Project Directory Structure and Files
+==================================================
+
+Directory: 
+--------------------------------------------------
+File: all_code.txt
+--------------------
+
+File: gui.py
+--------------------
+import tkinter as tk
+from tkinter import messagebox
+import logging
+from tracking_operations import login, search
+from tracking_info import finder
+from config import USERNAME, PASSWORD, EXCHANGE_RATE  # Imported EXCHANGE_RATE
+from logger import setup_logging
+from messages import WEIGHT_AND_COST_MESSAGE, PAYMENT_MESSAGE
+import requests
+from translator import translate_rus_to_eng
+
+class TrackingApp:
+    def __init__(self, root):
+        # Set up logging
+        setup_logging()
+        self.root = root
+        self.session = requests.Session()  # Create a requests.Session object
+        self.setup_ui()
+        self.login()
+
+    def login(self):
+        if login(self.session, USERNAME, PASSWORD):
+            print("Login successful")
+        else:
+            print("Login failed")
+
+    def setup_ui(self):
+        self.root.title("Tracking Number Input")
+        self.root.attributes("-topmost", True)
+
+        label = tk.Label(self.root, text="Enter Tracking Number:")
+        label.pack(pady=10)
+
+        entry_frame = tk.Frame(self.root)
+        entry_frame.pack(pady=10)
+
+        self.entry = tk.Entry(entry_frame, width=50)
+        self.entry.pack(side=tk.LEFT, padx=5)
+        self.entry.bind("<Return>", self.submit_tracking_number)
+        self.entry.bind("<Control-v>", self.paste)  # Handler for pasting text
+        self.entry.bind("<KeyRelease>", self.translate_input)  # Bind the translator
+
+        self.clear_button = tk.Button(entry_frame, text="X", command=self.clear_entry)
+        self.clear_button.pack(side=tk.LEFT)
+
+        submit_button = tk.Button(self.root, text="Submit", command=self.submit_tracking_number)
+        submit_button.pack(pady=10)
+
+        # Display the entered tracking number under the entry field
+        self.entered_tracking_number_label = tk.Label(self.root, text="")
+        self.entered_tracking_number_label.pack(pady=5)
+
+        self.weight_and_cost_label = tk.Label(self.root, text="")
+        self.weight_and_cost_label.pack(pady=10)
+
+        # Text field for normal tracking number
+        self.tracking_number_text_field = tk.Text(self.root, height=1, width=60)
+        self.tracking_number_text_field.pack(pady=10)
+        self.tracking_number_text_field.config(state=tk.NORMAL)
+
+        # Text field for raw tracking number
+        self.raw_tracking_number_text_field = tk.Text(self.root, height=1, width=60)
+        self.raw_tracking_number_text_field.pack(pady=10)
+        self.raw_tracking_number_text_field.config(state=tk.NORMAL)
+
+        self.copy_track_button = tk.Button(
+            self.root, text="Copy Tracking Number", command=self.copy_tracking_number_to_clipboard
+        )
+        self.copy_track_button.pack(pady=10)
+
+        self.copy_button = tk.Button(
+            self.root, text="Copy Message", command=self.copy_message_to_clipboard
+        )
+        self.copy_button.pack(pady=10)
+
+    def paste(self, event):
+        try:
+            self.entry.insert(tk.INSERT, self.root.clipboard_get())
+        except tk.TclError:
+            pass
+        return "break"
+
+    def translate_input(self, event):
+        current_text = self.entry.get()
+        translated_text = translate_rus_to_eng(current_text)
+        if current_text != translated_text:
+            self.entry.delete(0, tk.END)
+            self.entry.insert(0, translated_text)
+
+    def submit_tracking_number(self, event=None):
+        tracking_number = self.entry.get()
+        if tracking_number:
+            logging.info(f"Tracking number submitted: {tracking_number} ")
+            self.entered_tracking_number_label.config(text=f"Entered Tracking Number: {tracking_number}")
+            self.entry.delete(0, tk.END)  # Clear the entry field after submitting
+
+            search_result = search(self.session, tracking_number)  # Use self.session here
+            if search_result:
+                product_page_link = search_result["product_page_link"]
+                weight = search_result["weight"]
+                price_usd = search_result.get("price_usd")
+                raw_tracking_number = search_result["raw_tracking_number"]  # Get raw tracking number
+                if weight:
+                    print(f"Weight: {weight}")
+
+                    weight_value = float(weight.split()[0].replace(",", "."))
+                    cost = weight_value * 1470
+
+                    # Include price in USD
+                    if price_usd:
+                        price_usd_value = float(price_usd[:-2].replace(",", "."))
+                        price_rub = price_usd_value * EXCHANGE_RATE
+                        price_text = f"Price: {price_usd} USD ({price_rub:.2f} руб.)"
+                    else:
+                        price_text = "Price not available"
+                        price_rub = 0.0  # Default value if price not available
+
+                    self.weight_and_cost_label.config(
+                        text=WEIGHT_AND_COST_MESSAGE.format(weight=weight, cost=cost, price_usd=price_usd, price_rub=price_rub)
+                    )
+
+                    message = PAYMENT_MESSAGE.format(cost=cost)
+                    self.message = message  # Save the message to an instance variable
+                    logging.info(
+                        f"Raw Tracking Number: {raw_tracking_number}, "
+                        f"Processed Tracking Number: {tracking_number}, "
+                        f"Weight: {weight}, Cost: {cost:.2f} руб., "
+                        f"Price: {price_usd} USD ({price_rub:.2f} руб.), "
+                        f"Link: {product_page_link}"
+                    )
+                    # Use finder to get the right tracking number
+                    tracking_number_text = finder(search_result["tracking_number"])
+                    if isinstance(tracking_number_text, (tuple, list)):
+                        tracking_number_text = "".join(tracking_number_text)
+                    elif tracking_number_text is None:
+                        tracking_number_text = ""
+                    self.tracking_number_text_field.config(state=tk.NORMAL)
+                    self.tracking_number_text_field.delete(1.0, tk.END)
+                    self.tracking_number_text_field.insert(
+                        tk.END, tracking_number_text
+                    )  # Display normal tracking number
+
+                    self.raw_tracking_number_text_field.config(state=tk.NORMAL)
+                    self.raw_tracking_number_text_field.delete(1.0, tk.END)
+                    self.raw_tracking_number_text_field.insert(
+                        tk.END, raw_tracking_number
+                    )  # Display raw tracking number
+
+                    # Change background to green for 0.5 seconds
+                    self.tracking_number_text_field.config(bg="green")
+                    self.raw_tracking_number_text_field.config(bg="green")
+                    self.root.after(
+                        500, lambda: self.tracking_number_text_field.config(bg="white")
+                    )
+                    self.root.after(
+                        500, lambda: self.raw_tracking_number_text_field.config(bg="white")
+                    )
+                    self.copy_tracking_number_to_clipboard()
+
+                else:
+                    messagebox.showerror(
+                        "Error", "Failed to find the weight element or tracking number"
+                    )
+            else:
+                # If tracking number is not found on Globbing
+                logging.info(f"Tracking number not found. Using finder for: {tracking_number}")
+                tracking_number_text = finder(tracking_number)
+                if tracking_number_text:
+                    if isinstance(tracking_number_text, (tuple, list)):
+                        tracking_number_text = "".join(tracking_number_text)
+                    self.tracking_number_text_field.config(state=tk.NORMAL)
+                    self.tracking_number_text_field.delete(1.0, tk.END)
+                    self.tracking_number_text_field.insert(
+                        tk.END, tracking_number_text
+                    )  # Display tracking number from finder
+
+                    # Change background to green for 0.5 seconds
+                    self.tracking_number_text_field.config(bg="green")
+                    self.root.after(
+                        500, lambda: self.tracking_number_text_field.config(bg="white")
+                    )
+                    self.copy_tracking_number_to_clipboard()
+                else:
+                    messagebox.showerror(
+                        "Error", "Failed to process the tracking number using finder."
+                    )
+        else:
+            messagebox.showwarning("Input Error", "Please enter a tracking number")
+
+    def clear_entry(self):
+        self.entry.delete(0, tk.END)
+        self.entry.focus()
+
+    def copy_message_to_clipboard(self):
+        self.root.clipboard_clear()
+        self.root.clipboard_append(self.message)
+        self.copy_button.config(text="Copied")
+        self.root.after(1000, lambda: self.copy_button.config(text="Copy Message"))
+
+    def copy_tracking_number_to_clipboard(self):
+        self.root.clipboard_clear()
+        self.root.clipboard_append(
+            self.tracking_number_text_field.get("1.0", tk.END).strip()
+        )
+        self.copy_track_button.config(text="Copied")
+        self.root.after(
+            1000, lambda: self.copy_track_button.config(text="Copy Tracking Number")
+        )
+
+--------------------
+
+File: hui.py
+--------------------
+import shutil
+import os
+
+def clear_wdm_cache():
+    cache_dir = os.path.join(os.path.expanduser('~'), '.wdm')
+    if os.path.exists(cache_dir):
+        shutil.rmtree(cache_dir)
+        print("Кэш WebDriver Manager очищен.")
+    else:
+        print("Кэш уже был очищен или папка не существует.")
+
+clear_wdm_cache()
+
+--------------------
+
+File: logger.py
+--------------------
+import logging
+
+def setup_logging(log_file='tracking_app.log'):
+    logging.basicConfig(
+        filename=log_file,
+        level=logging.INFO,
+        format='%(asctime)s - %(levelname)s - %(message)s'
+    )
+
+--------------------
+
+File: main.py
+--------------------
+from tkinter import Tk
+from gui import TrackingApp
+
+
+if __name__ == "__main__":
+    root = Tk()
+    app = TrackingApp(root)
+    root.mainloop()
+
+--------------------
+
+File: messages.py
+--------------------
+WEIGHT_AND_COST_MESSAGE = "Weight: {weight}, Cost: {cost:.2f} руб.\nPrice: {price_usd} USD ({price_rub:.2f} руб.)"
+PAYMENT_MESSAGE = (
+    "Ваша посылка в Казахстане.\n"
+    "Стоимость доставки: {cost:.2f} рублей.\n"
+    "Оплатить можно переводом по номеру телефона: 89778107102 Светлана К Тиньькофф(Т) банк.\n"
+    "После оплаты просим написать адрес ПВЗ (СДЭК/Боксберри), ФИО, номер телефона."
+)
+
+--------------------
+
+File: search.py
+--------------------
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import time
+import json
+
+
+--------------------
+
+File: selenium_driver.py
+--------------------
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+
+def create_driver(headless=False):
+    # Настройки Chrome
+    chrome_options = Options()
+    if headless:
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--disable-gpu")  # Для предотвращения возможных ошибок в headless-режиме
+        chrome_options.add_argument("--no-sandbox")  # Для работы в окружениях без GUI (например, Docker)
+        chrome_options.add_argument("--disable-dev-shm-usage")  # Для повышения стабильности
+
+    # Автоматическое управление драйвером
+    service = Service(ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=service, options=chrome_options)
+    return driver
+--------------------
+
+File: tracking_info.py
+--------------------
+from tracking_numbers import get_tracking_number  # Добавлен импорт TrackingNumber
+
+def finder(row_track):
+  save = row_track
+  final = []
+  while len(row_track) > 4:
+      tr = get_tracking_number(row_track)
+      if tr is not None:
+        final.append(tr)
+      row_track = row_track[1:]
+  
+  if not final:
+      return None
+  
+  # Находим код курьера самого длинного элемента
+  longest_courier_code = max(final, key=lambda x: len(x.number)).courier.code
+  
+  # Фильтруем элементы по коду курьера и находим самый короткий
+  same_courier_final = [tr.number for tr in final if tr.courier.code == longest_courier_code]
+  return min(same_courier_final, key=len) if same_courier_final else None
+
+
+--------------------
+
+File: tracking_operations.py
+--------------------
+import requests
+from bs4 import BeautifulSoup
+import time
+import json
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+import traceback
+
+def get_recaptcha_via_requests(url):
+    try:
+        response = requests.get(url, timeout=30)  # Timeout of 30 seconds
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, 'html.parser')
+        recaptcha_input = soup.find('input', {'id': 'g-recaptcha-response'})
+        if recaptcha_input:
+            return recaptcha_input.get('value')
+        else:
+            print('reCAPTCHA element not found via requests.')
+            return None
+    except Exception as e:
+        print(f'Error requesting page via requests: {e}')
+        return None
+
+def get_recaptcha_via_selenium(url):
+    driver = None
+    try:
+        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+        driver.get(url)
+        time.sleep(20)  # Wait 20 seconds for full page load and dynamic content
+        recaptcha_input = driver.find_element(By.ID, 'g-recaptcha-response')
+        recaptcha_value = recaptcha_input.get_attribute('value')
+        return recaptcha_value
+    except Exception as e:
+        print(f'Error requesting page via Selenium: {e}')
+        traceback.print_exc()
+        return None
+    finally:
+        if driver:
+            driver.quit()
+
+def get_recaptcha_value(url):
+    # Attempt to get value via requests
+    recaptcha_value = get_recaptcha_via_requests(url)
+    if recaptcha_value:
+        return recaptcha_value
+    else:
+        # If failed, try with Selenium
+        return get_recaptcha_via_selenium(url)
+
+def login(session, email, password):
+    try:
+        login_url = "https://kz.globbing.com/ru/login/"
+
+        # Get reCAPTCHA value using get_recaptcha_value(url)
+        recaptcha_value = get_recaptcha_value(login_url)
+        if not recaptcha_value:
+            print("Failed to get reCAPTCHA value")
+            return False
+
+        # Get the login page to retrieve the _token value
+        response = session.get(login_url)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, 'html.parser')
+        token_input = soup.find('input', {'name': '_token'})
+        if token_input:
+            token = token_input.get('value')
+        else:
+            print("Failed to get _token value")
+            return False
+
+        # Prepare the login data
+        data = {
+            'email': email,
+            'password': password,
+            'g-recaptcha-response': recaptcha_value,
+            '_token': token
+        }
+
+        # Prepare headers
+        headers = {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Referer': login_url
+        }
+
+        # Perform login
+        login_response = session.post(login_url, data=data, headers=headers)
+        login_response.raise_for_status()
+
+        # The response might be JSON or might redirect
+        # Let's check the response
+        try:
+            json_data = login_response.json()
+            if 'data' in json_data and json_data['data'].get('message') == 'globbing.login.success':
+                redirect_url = json_data['data'].get('redirect_url', 'https://kz.globbing.com/ru')
+                # Optionally, follow the redirect
+                session.get(redirect_url)
+                return True
+            else:
+                print("Login failed:", json_data)
+                return False
+        except ValueError:
+            # Response is not JSON, maybe the login was successful
+            if login_response.url != login_url:
+                # Redirected to another page, login successful
+                return True
+            else:
+                print("Login failed, no JSON response")
+                return False
+
+    except Exception as e:
+        print(f"An error occurred during login: {e}")
+        traceback.print_exc()
+        return False
+
+def search(session, search_request):
+    try:
+        # Construct the URL with the request
+        timestamp = int(time.time() * 1000)
+        url = f"https://kz.globbing.com/ru/profile/my-orders/received?limit=50&search={search_request}&t={timestamp}"
+
+        # Set the headers
+        headers = {
+            'Accept': '*/*',
+            'Referer': 'https://kz.globbing.com/ru/profile/my-orders/received',
+            'X-Requested-With': 'XMLHttpRequest'
+            # Other headers as needed
+        }
+
+        # Perform GET request
+        response = session.get(url, headers=headers)
+        response.raise_for_status()
+        result = response.text
+
+        # Parse the HTML content with BeautifulSoup
+        soup = BeautifulSoup(result, 'html.parser')
+
+        # Find the tracking number and the link to the product page
+        tracking_number_element = soup.select_one('.track-number__col--out a')
+        if tracking_number_element:
+            tracking_number = tracking_number_element.get('title')
+            product_page_link = tracking_number_element.get('href')
+
+            # Get the package info (weight and price)
+            weight, price_usd = get_package_info(session, product_page_link)
+            return {
+                'tracking_number': tracking_number,
+                'product_page_link': product_page_link,
+                'weight': weight,
+                'price_usd': price_usd,
+                'raw_tracking_number': tracking_number_element.text.strip()  # Return raw tracking number
+            }
+        else:
+            print("Tracking number or product page link not found.")
+            return None
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        traceback.print_exc()
+        return None
+
+def fetch_page_content(session, product_page_link):
+    headers = {
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9',
+        'Referer': 'https://kz.globbing.com/ru/profile/my-orders/received',
+        # other headers as needed
+    }
+
+    response = session.get(product_page_link, headers=headers)
+    response.raise_for_status()
+    return response.text
+
+def extract_weight_and_price_from_html(html_content):
+    soup = BeautifulSoup(html_content, 'html.parser')
+    
+    # Find the weight element
+    weight_title = soup.find("p", class_="fs12", string="Вес")
+    if weight_title:
+        weight = weight_title.find_next("p", class_="fs14").text.strip()
+    else:
+        print("Weight title element not found.")
+        weight = None
+
+    # Find the price element
+    price_element = soup.find("p", class_="fs12", string="Стоимость доставки")
+    if price_element:
+        price_usd = price_element.find_next("p", class_="fs14").text.strip()
+    else:
+        print("Price element not found.")
+        price_usd = None
+
+    return weight, price_usd
+
+def get_package_info(session, product_page_link):
+    try:
+        # Fetch the page content
+        result = fetch_page_content(session, product_page_link)
+        
+        if result:
+            # Extract weight and price from the HTML content
+            weight, price_usd = extract_weight_and_price_from_html(result)
+            return weight, price_usd
+        else:
+            print("Error or unsuccessful request")
+            return None, None
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        traceback.print_exc()
+        return None, None
+
+--------------------
+
+File: translator.py
+--------------------
+def translate_rus_to_eng(text):
+    rus_to_eng = {
+        'а': 'f',
+        'б': ',',
+        'в': 'd',
+        'г': 'u',
+        'д': 'l',
+        'е': 't',
+        'ё': '`',
+        'ж': ';',
+        'з': 'p',
+        'и': 'b',
+        'й': 'q',
+        'к': 'r',
+        'л': 'k',
+        'м': 'v',
+        'н': 'y',
+        'о': 'j',
+        'п': 'g',
+        'р': 'h',
+        'с': 'c',
+        'т': 'n',
+        'у': 'e',
+        'ф': 'a',
+        'х': '[',
+        'ц': 'w',
+        'ч': 'x',
+        'ш': 'i',
+        'щ': 'o',
+        'ъ': ']',
+        'ы': 's',
+        'ь': 'm',
+        'э': "'",
+        'ю': '.',
+        'я': 'z',
+        'А': 'F',
+        'Б': '<',
+        'В': 'D',
+        'Г': 'U',
+        'Д': 'L',
+        'Е': 'T',
+        'Ё': '~',
+        'Ж': ':',
+        'З': 'P',
+        'И': 'B',
+        'Й': 'Q',
+        'К': 'R',
+        'Л': 'K',
+        'М': 'V',
+        'Н': 'Y',
+        'О': 'J',
+        'П': 'G',
+        'Р': 'H',
+        'С': 'C',
+        'Т': 'N',
+        'У': 'E',
+        'Ф': 'A',
+        'Х': '{',
+        'Ц': 'W',
+        'Ч': 'X',
+        'Ш': 'I',
+        'Щ': 'O',
+        'Ъ': '}',
+        'Ы': 'S',
+        'Ь': 'M',
+        'Э': '"',
+        'Ю': '>',
+        'Я': 'Z',
+        '№': '#',
+    }
+    translated = ''
+    for c in text:
+        translated += rus_to_eng.get(c, c)
+    return translated
+
+--------------------
