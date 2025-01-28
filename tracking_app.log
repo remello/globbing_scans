@@ -1,0 +1,37 @@
+2025-01-28 22:19:38,919 - INFO - ====== WebDriver manager ======
+2025-01-28 22:19:41,355 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-28 22:25:41,272 - INFO - ====== WebDriver manager ======
+2025-01-28 22:25:42,826 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-28 22:25:54,345 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-28 22:25:54,679 - INFO - Driver [C:\Users\Dieternal\.wdm\drivers\chromedriver\win64\132.0.6834.110\chromedriver-win32/chromedriver.exe] found in cache
+2025-01-28 22:28:56,124 - INFO - ====== WebDriver manager ======
+2025-01-28 22:29:00,070 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-28 22:29:00,450 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-28 22:29:00,791 - INFO - Driver [C:\Users\Dieternal\.wdm\drivers\chromedriver\win64\132.0.6834.110\chromedriver-win32/chromedriver.exe] found in cache
+2025-01-28 22:44:36,420 - INFO - ====== WebDriver manager ======
+2025-01-28 22:44:39,136 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-28 22:44:39,799 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-28 22:44:40,185 - INFO - Driver [C:\Users\Dieternal\.wdm\drivers\chromedriver\win64\132.0.6834.110\chromedriver-win32/chromedriver.exe] found in cache
+2025-01-28 22:48:54,265 - INFO - Tracking number submitted: 1ZAR44790309173289 
+2025-01-28 22:48:56,657 - INFO - Tracking number not found. Using finder for: 1ZAR44790309173289
+2025-01-28 22:49:13,643 - INFO - Tracking number submitted: 1ZAR44790309173289 
+2025-01-28 22:49:14,299 - INFO - Tracking number not found. Using finder for: 1ZAR44790309173289
+2025-01-28 22:54:49,753 - INFO - ====== WebDriver manager ======
+2025-01-28 22:54:52,352 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-28 22:54:52,746 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-28 22:54:53,069 - INFO - Driver [C:\Users\Dieternal\.wdm\drivers\chromedriver\win64\132.0.6834.110\chromedriver-win32/chromedriver.exe] found in cache
+2025-01-28 22:55:39,083 - INFO - Tracking number submitted: DISM.exe/Online/Cleanup-Image/Restorehealth 
+2025-01-28 22:55:39,693 - INFO - Tracking number not found. Using finder for: DISM.exe/Online/Cleanup-Image/Restorehealth
+2025-01-28 22:55:50,789 - INFO - Tracking number submitted: 1ZAR44790309173289 
+2025-01-28 22:55:51,445 - INFO - Tracking number not found. Using finder for: 1ZAR44790309173289
+2025-01-28 22:57:18,525 - INFO - Tracking number submitted: anastasiachernova9621091390004807631900434255009616 
+2025-01-28 22:57:20,708 - INFO - Raw Tracking Number: anastasiachernova9621091390004807631900434255009616, Processed Tracking Number: anastasiachernova9621091390004807631900434255009616, Weight: 1  г, Cost: 1470.00 руб., Price: 11.00 $ USD (1100.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10226089/
+2025-01-28 23:03:44,068 - INFO - ====== WebDriver manager ======
+2025-01-28 23:03:45,889 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-28 23:03:46,276 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-28 23:03:46,596 - INFO - Driver [C:\Users\Dieternal\.wdm\drivers\chromedriver\win64\132.0.6834.110\chromedriver-win32/chromedriver.exe] found in cache
+2025-01-28 23:04:27,233 - ERROR - Attempt 1/3 failed: 404 Client Error: Not Found for url: https://kz.globbing.com/ru/profile
+2025-01-28 23:04:28,582 - ERROR - Attempt 2/3 failed: 404 Client Error: Not Found for url: https://kz.globbing.com/ru/profile
+2025-01-28 23:04:29,928 - ERROR - Attempt 3/3 failed: 404 Client Error: Not Found for url: https://kz.globbing.com/ru/profile
+2025-01-28 23:04:42,050 - INFO - Tracking number submitted: anastasiachernova9621091390004807631900434255009616 
+2025-01-28 23:04:43,301 - INFO - Raw Tracking Number: anastasiachernova9621091390004807631900434255009616, Processed Tracking Number: anastasiachernova9621091390004807631900434255009616, Weight: 1  г, Cost: 1470.00 руб., Price: 11.00 $ USD (1100.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10226089/

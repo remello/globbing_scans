@@ -1,12 +1,12 @@
 import tkinter as tk
 from tkinter import messagebox
 import logging
-from tracking_operations import login, search
+from tracking_operations import search
 from tracking_info import finder
 from config import USERNAME, PASSWORD, EXCHANGE_RATE  # Imported EXCHANGE_RATE
 from logger import setup_logging
 from messages import WEIGHT_AND_COST_MESSAGE, PAYMENT_MESSAGE
-import requests
+from session import GlobbingSession
 from translator import translate_rus_to_eng
 
 class TrackingApp:
@@ -14,12 +14,12 @@ class TrackingApp:
         # Set up logging
         setup_logging()
         self.root = root
-        self.session = requests.Session()  # Create a requests.Session object
+        self.session = GlobbingSession(USERNAME, PASSWORD)  # Используем новый класс сессии
         self.setup_ui()
-        self.login()
+        self._login()
 
-    def login(self):
-        if login(self.session, USERNAME, PASSWORD):
+    def _login(self):
+        if self.session._login():
             print("Login successful")
         else:
             print("Login failed")
@@ -94,7 +94,7 @@ class TrackingApp:
             self.entered_tracking_number_label.config(text=f"Entered Tracking Number: {tracking_number}")
             self.entry.delete(0, tk.END)  # Clear the entry field after submitting
 
-            search_result = search(self.session, tracking_number)  # Use self.session here
+            search_result = search(self.session.get(), tracking_number)  # Используем метод get() для получения сессии
             if search_result:
                 product_page_link = search_result["product_page_link"]
                 weight = search_result["weight"]

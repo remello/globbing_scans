@@ -3,14 +3,17 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
-def create_driver(headless=False):
+def create_driver(headless=True):
     # Настройки Chrome
     chrome_options = Options()
     if headless:
-        chrome_options.add_argument("--headless")
-        chrome_options.add_argument("--disable-gpu")  # Для предотвращения возможных ошибок в headless-режиме
-        chrome_options.add_argument("--no-sandbox")  # Для работы в окружениях без GUI (например, Docker)
-        chrome_options.add_argument("--disable-dev-shm-usage")  # Для повышения стабильности
+        chrome_options.add_argument("--headless=new")  # Новый headless режим
+        chrome_options.add_argument("--disable-gpu")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--window-size=1920,1080")  # Установка размера окна
+        chrome_options.add_argument("--disable-notifications")  # Отключение уведомлений
+        chrome_options.add_argument("--disable-extensions")  # Отключение расширений
 
     # Автоматическое управление драйвером
     service = Service(ChromeDriverManager().install())
