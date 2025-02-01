@@ -35,3 +35,88 @@
 2025-01-28 23:04:29,928 - ERROR - Attempt 3/3 failed: 404 Client Error: Not Found for url: https://kz.globbing.com/ru/profile
 2025-01-28 23:04:42,050 - INFO - Tracking number submitted: anastasiachernova9621091390004807631900434255009616 
 2025-01-28 23:04:43,301 - INFO - Raw Tracking Number: anastasiachernova9621091390004807631900434255009616, Processed Tracking Number: anastasiachernova9621091390004807631900434255009616, Weight: 1  г, Cost: 1470.00 руб., Price: 11.00 $ USD (1100.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10226089/
+2025-01-28 23:13:39,212 - INFO - ====== WebDriver manager ======
+2025-01-28 23:13:40,742 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-28 23:13:41,198 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-28 23:13:41,536 - INFO - There is no [win64] chromedriver "132.0.6834.111" for browser google-chrome "132.0.6834" in cache
+2025-01-28 23:13:41,536 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-28 23:13:42,358 - INFO - WebDriver version 132.0.6834.111 selected
+2025-01-28 23:13:42,364 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/132.0.6834.111/win32/chromedriver-win32.zip
+2025-01-28 23:13:42,364 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/132.0.6834.111/win32/chromedriver-win32.zip
+2025-01-28 23:13:42,736 - INFO - Driver downloading response is 200
+2025-01-28 23:13:43,863 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-28 23:13:44,864 - INFO - Driver has been saved in cache [C:\Users\Dieternal\.wdm\drivers\chromedriver\win64\132.0.6834.111]
+2025-01-28 23:14:44,756 - INFO - Tracking number submitted: anastasiachernova9621091390004807631900434255009616 
+2025-01-28 23:14:47,499 - INFO - Raw Tracking Number: anastasiachernova9621091390004807631900434255009616, Processed Tracking Number: anastasiachernova9621091390004807631900434255009616, Weight: 1  г, Cost: 1470.00 руб., Price: 11.00 $ USD (1100.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10226089/
+2025-01-28 23:15:17,298 - INFO - Tracking number submitted: anastasiachernova9621091390004807631900434255009616 
+2025-01-28 23:15:18,641 - INFO - Raw Tracking Number: anastasiachernova9621091390004807631900434255009616, Processed Tracking Number: anastasiachernova9621091390004807631900434255009616, Weight: 1  г, Cost: 1000.00 руб., Price: 11.00 $ USD (1100.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10226089/
+2025-01-28 23:21:42,136 - INFO - ====== WebDriver manager ======
+2025-01-28 23:21:44,362 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-28 23:21:44,764 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-28 23:21:45,090 - INFO - Driver [C:\Users\Dieternal\.wdm\drivers\chromedriver\win64\132.0.6834.111\chromedriver-win32/chromedriver.exe] found in cache
+2025-01-28 23:28:28,084 - INFO - ====== WebDriver manager ======
+2025-01-28 23:28:31,484 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-28 23:28:31,901 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-28 23:28:32,240 - INFO - Driver [C:\Users\Dieternal\.wdm\drivers\chromedriver\win64\132.0.6834.111\chromedriver-win32/chromedriver.exe] found in cache
+2025-01-28 23:48:40,940 - INFO - ====== WebDriver manager ======
+2025-01-28 23:48:42,866 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-28 23:48:43,232 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-28 23:48:43,565 - INFO - Driver [C:\Users\Dieternal\.wdm\drivers\chromedriver\win64\132.0.6834.111\chromedriver-win32/chromedriver.exe] found in cache
+2025-01-29 12:00:37,419 - INFO - ====== WebDriver manager ======
+2025-01-29 12:00:45,194 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-29 12:00:45,660 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-29 12:00:46,048 - INFO - There is no [win64] chromedriver "132.0.6834.159" for browser google-chrome "132.0.6834" in cache
+2025-01-29 12:00:46,048 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-29 12:00:46,864 - INFO - WebDriver version 132.0.6834.159 selected
+2025-01-29 12:00:46,869 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/132.0.6834.159/win32/chromedriver-win32.zip
+2025-01-29 12:00:46,869 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/132.0.6834.159/win32/chromedriver-win32.zip
+2025-01-29 12:00:47,275 - INFO - Driver downloading response is 200
+2025-01-29 12:00:48,518 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-29 12:00:49,682 - INFO - Driver has been saved in cache [C:\Users\Dieternal\.wdm\drivers\chromedriver\win64\132.0.6834.159]
+2025-01-29 12:01:47,564 - INFO - Login successful
+2025-01-29 12:03:11,926 - INFO - ====== WebDriver manager ======
+2025-01-29 12:03:13,553 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-29 12:03:14,029 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-29 12:03:14,422 - INFO - Driver [C:\Users\Dieternal\.wdm\drivers\chromedriver\win64\132.0.6834.159\chromedriver-win32/chromedriver.exe] found in cache
+2025-01-29 12:04:01,335 - INFO - Login successful
+2025-01-29 12:05:47,022 - INFO - Tracking number submitted: anastasiachernova9621091390004807631900434255009616
+2025-01-29 12:05:47,054 - ERROR - Error searching tracking number: GlobbingSession.get() got an unexpected keyword argument 'headers'
+2025-01-29 12:15:00,353 - INFO - ====== WebDriver manager ======
+2025-01-29 12:15:01,919 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-29 12:15:02,348 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-29 12:15:02,730 - INFO - Driver [C:\Users\Dieternal\.wdm\drivers\chromedriver\win64\132.0.6834.159\chromedriver-win32/chromedriver.exe] found in cache
+2025-01-29 12:15:47,521 - INFO - Login successful
+2025-01-29 12:20:40,094 - INFO - Tracking number submitted: rererererere
+2025-01-29 12:20:42,453 - INFO - Tracking number element not found
+2025-01-29 12:20:54,228 - INFO - ====== WebDriver manager ======
+2025-01-29 12:20:56,773 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-29 12:20:57,264 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-29 12:20:57,627 - INFO - Driver [C:\Users\Dieternal\.wdm\drivers\chromedriver\win64\132.0.6834.159\chromedriver-win32/chromedriver.exe] found in cache
+2025-01-29 12:21:45,520 - INFO - Login successful
+2025-01-29 12:24:56,209 - INFO - Tracking number submitted: anastasiachernova9621091390004807631900434255009616
+2025-01-29 12:25:01,384 - INFO - Raw Tracking Number: anastasiachernova9621091390004807631900434255009616, Processed Tracking Number: 434255009616, Weight: 1  г, Cost: 1470.00 руб., Price: 11.00 $ USD (1100.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10226089/
+2025-01-29 17:26:59,173 - INFO - ====== WebDriver manager ======
+2025-01-29 17:27:03,019 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-29 17:27:03,524 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-29 17:27:03,873 - INFO - Driver [C:\Users\Dieternal\.wdm\drivers\chromedriver\win64\132.0.6834.159\chromedriver-win32/chromedriver.exe] found in cache
+2025-01-29 17:27:57,243 - INFO - Login successful
+2025-01-29 17:28:04,976 - INFO - Tracking number submitted: US-60309V6
+2025-01-29 17:28:08,295 - INFO - Raw Tracking Number: ROZABELAYC11LSCXO504172280, Processed Tracking Number: None, Weight: 1.4  г, Cost: 2058.00 руб., Price: 15.40 $ USD (1540.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/9725920/
+2025-01-29 17:28:23,663 - INFO - Tracking number submitted: US-60309V6
+2025-01-29 17:28:25,553 - INFO - Raw Tracking Number: ROZABELAYC11LSCXO504172280, Processed Tracking Number: None, Weight: 1.4  г, Cost: 1400.00 руб., Price: 15.40 $ USD (1540.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/9725920/
+2025-01-29 17:28:33,708 - INFO - Tracking number submitted: [ITM]000504947932
+2025-01-29 17:28:34,584 - INFO - Tracking number element not found
+2025-01-29 17:28:51,622 - INFO - Tracking number submitted: 00006675281058533607
+2025-01-29 17:28:52,401 - INFO - Tracking number element not found
+2025-01-29 17:29:11,782 - INFO - Tracking number submitted: https:..www.youtube.com.watch,v=os9LItgVt0o
+2025-01-29 17:29:13,188 - INFO - Tracking number element not found
+2025-02-01 16:35:49,541 - INFO - ====== WebDriver manager ======
+2025-02-01 16:35:55,933 - INFO - Get LATEST chromedriver version for google-chrome
+2025-02-01 16:35:56,371 - INFO - Get LATEST chromedriver version for google-chrome
+2025-02-01 16:35:56,688 - INFO - Get LATEST chromedriver version for google-chrome
+2025-02-01 16:35:57,475 - INFO - WebDriver version 132.0.6834.159 selected
+2025-02-01 16:35:57,480 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/132.0.6834.159/win32/chromedriver-win32.zip
+2025-02-01 16:35:57,480 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/132.0.6834.159/win32/chromedriver-win32.zip
+2025-02-01 16:35:57,805 - INFO - Driver downloading response is 200
+2025-02-01 16:35:58,682 - INFO - Get LATEST chromedriver version for google-chrome
+2025-02-01 16:36:00,630 - INFO - Driver has been saved in cache [C:\Users\Dieternal\.wdm\drivers\chromedriver\win64\132.0.6834.159]

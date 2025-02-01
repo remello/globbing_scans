@@ -11,16 +11,12 @@ class GlobbingSession:
     def __init__(self, username, password):
         self._username = username
         self._password = password
-        self._request_wrapper = RequestWrapper()
-        self._session = self._request_wrapper.get_session()
+        self.request_wrapper = RequestWrapper()
+        self._session = self.request_wrapper.get_session()
         self._selenium_driver = None
         self._is_logged_in = False
         self._keep_alive_thread = None
         self._stop_keep_alive = threading.Event()
-        
-    def get(self):
-        """Возвращает текущую сессию"""
-        return self._session
 
     def _keep_alive(self):
         """Фоновый поток для поддержания сессии активной"""
@@ -28,7 +24,7 @@ class GlobbingSession:
             try:
                 if self._is_logged_in:
                     # Делаем запрос к профилю пользователя для поддержания сессии
-                    self._request_wrapper.get("https://kz.globbing.com/ru/profile/my-orders")
+                    self.request_wrapper.get("https://kz.globbing.com/ru/profile/my-orders")
             except Exception as e:
                 print(f"Ошибка в keep_alive: {e}")
             time.sleep(120)  # Ждем 2 минуты
@@ -51,7 +47,7 @@ class GlobbingSession:
         self.stop_keep_alive()
         new_session = requests.Session()
         self._session = new_session
-        self._request_wrapper.set_session(new_session)
+        self.request_wrapper.set_session(new_session)
         if self._selenium_driver:
             self._selenium_driver.quit()
         self._selenium_driver = None
@@ -100,7 +96,7 @@ class GlobbingSession:
                 return False
 
             # Получаем _token со страницы логина
-            response = self._request_wrapper.get(login_url)
+            response = self.request_wrapper.get(login_url)
             soup = BeautifulSoup(response.text, 'html.parser')
             token_input = soup.find('input', {'name': '_token'})
             if not token_input:
@@ -123,14 +119,14 @@ class GlobbingSession:
             }
 
             # Выполняем авторизацию
-            login_response = self._request_wrapper.post(login_url, data=data, headers=headers)
+            login_response = self.request_wrapper.post(login_url, data=data, headers=headers)
 
             # Проверяем ответ
             try:
                 json_data = login_response.json()
                 if 'data' in json_data and json_data['data'].get('message') == 'globbing.login.success':
                     redirect_url = json_data['data'].get('redirect_url', 'https://kz.globbing.com/ru')
-                    self._request_wrapper.get(redirect_url)
+                    self.request_wrapper.get(redirect_url)
                     self._is_logged_in = True
                     self.start_keep_alive()
                     return True
