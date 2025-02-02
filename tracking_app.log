@@ -120,3 +120,132 @@
 2025-02-01 16:35:57,805 - INFO - Driver downloading response is 200
 2025-02-01 16:35:58,682 - INFO - Get LATEST chromedriver version for google-chrome
 2025-02-01 16:36:00,630 - INFO - Driver has been saved in cache [C:\Users\Dieternal\.wdm\drivers\chromedriver\win64\132.0.6834.159]
+2025-02-01 16:38:41,805 - INFO - ====== WebDriver manager ======
+2025-02-01 16:38:44,835 - INFO - Get LATEST chromedriver version for google-chrome
+2025-02-01 16:38:45,323 - INFO - Get LATEST chromedriver version for google-chrome
+2025-02-01 16:38:45,634 - INFO - Driver [C:\Users\Dieternal\.wdm\drivers\chromedriver\win64\132.0.6834.159\chromedriver-win32/chromedriver.exe] found in cache
+2025-02-01 16:39:59,031 - INFO - Login successful
+2025-02-01 16:43:57,392 - INFO - Tracking number submitted: US-46652V7
+2025-02-01 16:44:00,844 - INFO - Raw Tracking Number: 1ZAR44790323700833, Processed Tracking Number: 1ZAR44790323700833, Weight: 0.6  г, Cost: 882.00 руб., Price: 6.60 $ USD (660.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10219846/
+2025-02-01 16:46:02,087 - INFO - Tracking number submitted: US-46652V7
+2025-02-01 16:46:04,119 - INFO - Raw Tracking Number: 1ZAR44790323700833, Processed Tracking Number: 1ZAR44790323700833, Weight: 0.6  г, Cost: 996.00 руб., Price: 6.60 $ USD (660.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10219846/
+2025-02-01 16:46:36,245 - INFO - Tracking number submitted: US1-288417V9
+2025-02-01 16:46:38,266 - INFO - Raw Tracking Number: C14201972020699400108105463321439267, Processed Tracking Number: 9400108105463321439267, Weight: 0.1  г, Cost: 166.00 руб., Price: 1.10 $ USD (110.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10213233/
+2025-02-01 16:48:00,045 - INFO - Tracking number submitted: US1-283578V9
+2025-02-01 16:48:01,989 - INFO - Raw Tracking Number: 4201972020699400108105463290497862, Processed Tracking Number: 9400108105463290497862, Weight: 0.2  г, Cost: 332.00 руб., Price: 2.20 $ USD (220.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10161392/
+2025-02-01 16:51:58,726 - INFO - Tracking number submitted: US1-286733V9
+2025-02-01 16:52:00,817 - INFO - Raw Tracking Number: C14201972020699400108105463285025797, Processed Tracking Number: 9400108105463285025797, Weight: 0.1  г, Cost: 166.00 руб., Price: 1.10 $ USD (110.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10167859/
+2025-02-01 16:54:41,679 - INFO - Tracking number submitted: US1-219650V9
+2025-02-01 16:54:43,596 - INFO - Raw Tracking Number: TBA318709610970, Processed Tracking Number: TBA318709610970, Weight: 0.7  г, Cost: 1162.00 руб., Price: 7.70 $ USD (770.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10223883/
+2025-02-01 17:03:18,495 - INFO - Tracking number submitted: US1-260678V9
+2025-02-01 17:03:20,898 - INFO - Raw Tracking Number: UUS5171268812070121, Processed Tracking Number: 68812070121, Weight: 0.2  г, Cost: 332.00 руб., Price: 2.20 $ USD (220.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10231956/
+2025-02-01 17:06:06,094 - INFO - Tracking number submitted: US1-196917V9
+2025-02-01 17:06:08,545 - INFO - Raw Tracking Number: 1Z514A940491629000, Processed Tracking Number: 1Z514A940491629000, Weight: 0.3  г, Cost: 498.00 руб., Price: 3.30 $ USD (330.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10179887/
+2025-02-01 17:06:14,497 - INFO - Tracking number submitted: UUS5171268812070121
+2025-02-01 17:06:16,319 - INFO - Raw Tracking Number: UUS5171268812070121, Processed Tracking Number: 68812070121, Weight: 0.2  г, Cost: 332.00 руб., Price: 2.20 $ USD (220.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10231956/
+2025-02-01 17:06:18,927 - INFO - Tracking number submitted: US1-260678V9
+2025-02-01 17:06:20,658 - INFO - Raw Tracking Number: UUS5171268812070121, Processed Tracking Number: 68812070121, Weight: 0.2  г, Cost: 332.00 руб., Price: 2.20 $ USD (220.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10231956/
+2025-02-01 17:18:27,794 - INFO - Tracking number submitted: US1-294185V9
+2025-02-01 17:18:29,850 - INFO - Raw Tracking Number: C14201972020699400108105462335006496, Processed Tracking Number: 9400108105462335006496, Weight: 0.1  г, Cost: 166.00 руб., Price: 1.10 $ USD (110.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10213235/
+2025-02-01 17:19:22,061 - INFO - Tracking number submitted: US1-289498V9
+2025-02-01 17:19:23,998 - INFO - Raw Tracking Number: C1420197209400111206219583897417, Processed Tracking Number: 9400111206219583897417, Weight: 0.2  г, Cost: 332.00 руб., Price: 2.20 $ USD (220.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10230459/
+2025-02-01 17:20:19,499 - INFO - Tracking number submitted: US1-294191V9
+2025-02-01 17:20:21,629 - INFO - Raw Tracking Number: C14201972020699400108105463314382327, Processed Tracking Number: 9400108105463314382327, Weight: 0.1  г, Cost: 166.00 руб., Price: 1.10 $ USD (110.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10213242/
+2025-02-01 17:21:18,118 - INFO - Tracking number submitted: US1-294192V9
+2025-02-01 17:21:22,290 - INFO - Raw Tracking Number: C14201972020699400108105462335260638, Processed Tracking Number: 9400108105462335260638, Weight: 0.1  г, Cost: 166.00 руб., Price: 1.10 $ USD (110.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10213234/
+2025-02-01 17:57:29,795 - INFO - Tracking number submitted: US1-196917V9
+2025-02-01 17:57:33,378 - INFO - Raw Tracking Number: 1Z514A940491629000, Processed Tracking Number: 1Z514A940491629000, Weight: 0.3  г, Cost: 498.00 руб., Price: 3.30 $ USD (330.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10179887/
+2025-02-01 18:12:09,567 - INFO - Tracking number submitted: US1-196917V9
+2025-02-01 18:12:12,538 - INFO - Raw Tracking Number: 1Z514A940491629000, Processed Tracking Number: 1Z514A940491629000, Weight: 0.3  г, Cost: 498.00 руб., Price: 3.30 $ USD (330.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10179887/
+2025-02-01 18:14:42,254 - INFO - Tracking number submitted: US1-294751V9
+2025-02-01 18:14:44,138 - INFO - Raw Tracking Number: anastasiachernova9621091390004807631900434255009616, Processed Tracking Number: 434255009616, Weight: 1  г, Cost: 1660.00 руб., Price: 11.00 $ USD (1100.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10226089/
+2025-02-01 18:15:17,584 - INFO - Tracking number submitted: US1-599761V9
+2025-02-01 18:15:19,303 - INFO - Raw Tracking Number: 1Z4V32310319685168, Processed Tracking Number: 1Z4V32310319685168, Weight: 0.7  г, Cost: 1162.00 руб., Price: 7.70 $ USD (770.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10181477/
+2025-02-01 18:16:58,668 - INFO - Tracking number submitted: US1-293844V9
+2025-02-01 18:17:00,634 - INFO - Raw Tracking Number: anastasiiachernovaC1420197209549011076325011674016, Processed Tracking Number: 9549011076325011674016, Weight: 0.6  г, Cost: 996.00 руб., Price: 6.60 $ USD (660.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10203465/
+2025-02-01 18:20:10,645 - INFO - Tracking number submitted: US1-232878V9
+2025-02-01 18:20:12,722 - INFO - Raw Tracking Number: C14201972020699434608105462328608371, Processed Tracking Number: 9434608105462328608371, Weight: 0.8  г, Cost: 1328.00 руб., Price: 8.80 $ USD (880.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10167849/
+2025-02-01 18:21:04,971 - INFO - Tracking number submitted: US1-194568V9
+2025-02-01 18:21:06,964 - INFO - Raw Tracking Number: 9622080430000122583000435934549985, Processed Tracking Number: 435934549985, Weight: 1.7  г, Cost: 2822.00 руб., Price: 18.70 $ USD (1870.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10174250/
+2025-02-01 18:21:54,813 - INFO - Tracking number submitted: US1-384862V9
+2025-02-01 18:21:56,654 - INFO - Raw Tracking Number: 4201972020699400108105462316244251, Processed Tracking Number: 9400108105462316244251, Weight: 0.4  г, Cost: 664.00 руб., Price: 4.40 $ USD (440.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10161374/
+2025-02-01 19:54:15,301 - INFO - Tracking number submitted: US1-260425V9
+2025-02-01 19:54:20,190 - INFO - Raw Tracking Number: 1ZR0C5070317614055, Processed Tracking Number: 1ZR0C5070317614055, Weight: 0.6  г, Cost: 996.00 руб., Price: 6.60 $ USD (660.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10217873/
+2025-02-01 19:56:45,484 - INFO - Tracking number submitted: US1-243111V9
+2025-02-01 19:56:47,390 - INFO - Raw Tracking Number: C14201972020699434608105463301765548, Processed Tracking Number: 9434608105463301765548, Weight: 0.5  г, Cost: 830.00 руб., Price: 5.50 $ USD (550.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10161346/
+2025-02-01 20:00:38,396 - INFO - Tracking number submitted: US1-289456V9
+2025-02-01 20:00:41,120 - INFO - Raw Tracking Number: 9449011206206873229036, Processed Tracking Number: 9449011206206873229036, Weight: 0.5  г, Cost: 830.00 руб., Price: 5.50 $ USD (550.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10194133/
+2025-02-01 20:02:26,823 - INFO - Tracking number submitted: UKK-28102V
+2025-02-01 20:02:28,714 - INFO - Raw Tracking Number: h04fua0010556123, Processed Tracking Number: None, Weight: 0.4  г, Cost: 664.00 руб., Price: 4.40 $ USD (440.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10225003/
+2025-02-01 20:03:57,595 - INFO - Tracking number submitted: UKK-28647V
+2025-02-01 20:03:59,425 - INFO - Raw Tracking Number: ukk-28647v, Processed Tracking Number: None, Weight: 0.5  г, Cost: 830.00 руб., Price: 5.50 $ USD (550.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10224205/
+2025-02-01 20:04:19,576 - INFO - Tracking number submitted: UKK-28242V
+2025-02-01 20:04:21,388 - INFO - Raw Tracking Number: 021304C003CBEEB2, Processed Tracking Number: None, Weight: 0.4  г, Cost: 664.00 руб., Price: 4.40 $ USD (440.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10225001/
+2025-02-01 20:18:18,286 - INFO - Tracking number submitted: US1-289204V9
+2025-02-01 20:18:20,291 - INFO - Raw Tracking Number: 9549013806825011451879, Processed Tracking Number: 9549013806825011451879, Weight: 0.5  г, Cost: 830.00 руб., Price: 5.50 $ USD (550.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10195627/
+2025-02-01 20:19:00,622 - INFO - Tracking number submitted: US1-232878V9
+2025-02-01 20:19:02,686 - INFO - Raw Tracking Number: C14201972020699434608105462328608371, Processed Tracking Number: 9434608105462328608371, Weight: 0.8  г, Cost: 1328.00 руб., Price: 8.80 $ USD (880.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10167849/
+2025-02-01 20:28:50,527 - INFO - Tracking number submitted: US1-275274V9
+2025-02-01 20:28:54,373 - INFO - Raw Tracking Number: 420197209434611105502196303234, Processed Tracking Number: 9434611105502196303234, Weight: 1.2  г, Cost: 1992.00 руб., Price: 13.20 $ USD (1320.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10213249/
+2025-02-01 20:30:20,140 - INFO - Tracking number submitted: US1-232691V9
+2025-02-01 20:30:21,945 - INFO - Raw Tracking Number: C1420197209405536208070301377420, Processed Tracking Number: 9405536208070301377420, Weight: 2.1  г, Cost: 3486.00 руб., Price: 23.10 $ USD (2310.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10150875/
+2025-02-01 20:31:12,090 - INFO - Tracking number submitted: US1-288433V9
+2025-02-01 20:31:14,213 - INFO - Raw Tracking Number: anastasiiachernova92612902711111543400721762, Processed Tracking Number: 92612902711111543400721762, Weight: 0.2  г, Cost: 332.00 руб., Price: 2.20 $ USD (220.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10205229/
+2025-02-01 20:36:41,482 - INFO - Tracking number submitted: US1-284322V9
+2025-02-01 20:36:43,434 - INFO - Raw Tracking Number: 420197209400136208070362159970, Processed Tracking Number: 9400136208070362159970, Weight: 0.4  г, Cost: 664.00 руб., Price: 4.40 $ USD (440.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10167855/
+2025-02-01 20:40:04,608 - INFO - Tracking number submitted: US1-384862V9
+2025-02-01 20:40:07,292 - INFO - Raw Tracking Number: 4201972020699400108105462316244251, Processed Tracking Number: 9400108105462316244251, Weight: 0.4  г, Cost: 664.00 руб., Price: 4.40 $ USD (440.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10161374/
+2025-02-01 20:43:46,158 - INFO - Tracking number submitted: US1-219160V9
+2025-02-01 20:43:50,073 - INFO - Raw Tracking Number: 1ZAR44790334808420, Processed Tracking Number: 1ZAR44790334808420, Weight: 0.7  г, Cost: 1162.00 руб., Price: 7.70 $ USD (770.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10219844/
+2025-02-01 20:51:04,099 - INFO - Tracking number submitted:  US1-219160V9
+2025-02-01 20:51:06,525 - INFO - Raw Tracking Number: 1ZAR44790334808420, Processed Tracking Number: 1ZAR44790334808420, Weight: 0.7  г, Cost: 1162.00 руб., Price: 7.70 $ USD (770.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10219844/
+2025-02-01 20:59:31,295 - INFO - Tracking number submitted:  US1-233260V9
+2025-02-01 20:59:33,364 - INFO - Raw Tracking Number: 1Z6Y09R00336208200, Processed Tracking Number: 1Z6Y09R00336208200, Weight: 1.9  г, Cost: 3154.00 руб., Price: 20.90 $ USD (2090.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10182154/
+2025-02-01 21:01:24,641 - INFO - Tracking number submitted: UKK-28654V
+2025-02-01 21:01:26,648 - INFO - Raw Tracking Number: 1495478082390991985300771442535589, Processed Tracking Number: 771442535589, Weight: 0.3  г, Cost: 498.00 руб., Price: 3.30 $ USD (330.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10224229/
+2025-02-01 21:11:54,632 - INFO - Tracking number submitted: 4201972020699400108105463301438655
+2025-02-01 21:11:57,140 - INFO - Raw Tracking Number: 4201972020699400108105463301438655, Processed Tracking Number: 9400108105463301438655, Weight: 0.4  г, Cost: 664.00 руб., Price: 4.40 $ USD (440.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10163599/
+2025-02-01 21:11:59,763 - INFO - Tracking number submitted: 4201972020699400108105463301438655
+2025-02-01 21:12:01,478 - INFO - Raw Tracking Number: 4201972020699400108105463301438655, Processed Tracking Number: 9400108105463301438655, Weight: 0.4  г, Cost: 664.00 руб., Price: 4.40 $ USD (440.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10163599/
+2025-02-01 21:17:06,517 - INFO - Tracking number submitted: US1-383376V9
+2025-02-01 21:17:08,378 - INFO - Raw Tracking Number: anastasiiachernovaC1420197209234690350657301244997, Processed Tracking Number: 9234690350657301244997, Weight: 0.7  г, Cost: 1162.00 руб., Price: 7.70 $ USD (770.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10163311/
+2025-02-01 21:17:08,416 - INFO - Tracking number submitted: US1-383376V9
+2025-02-01 21:17:10,256 - INFO - Raw Tracking Number: anastasiiachernovaC1420197209234690350657301244997, Processed Tracking Number: 9234690350657301244997, Weight: 0.7  г, Cost: 1162.00 руб., Price: 7.70 $ USD (770.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10163311/
+2025-02-01 21:22:17,250 - INFO - Tracking number submitted: US1-286731V9
+2025-02-01 21:22:19,427 - INFO - Raw Tracking Number: C14201972020699434608105463302767855, Processed Tracking Number: 9434608105463302767855, Weight: 0.9  г, Cost: 1494.00 руб., Price: 9.90 $ USD (990.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10167883/
+2025-02-01 21:23:18,824 - INFO - Tracking number submitted: 420197209261290980628641363083
+2025-02-01 21:23:19,616 - INFO - Tracking number element not found
+2025-02-01 21:23:21,249 - INFO - Tracking number submitted: US1-376851V9
+2025-02-01 21:23:22,969 - INFO - Raw Tracking Number: anastasiiachernova9621091390004807631900434255011248, Processed Tracking Number: 434255011248, Weight: 1.9  г, Cost: 3154.00 руб., Price: 20.90 $ USD (2090.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10226046/
+2025-02-01 21:26:19,952 - INFO - Tracking number submitted: UKK-27679V
+2025-02-01 21:26:21,836 - INFO - Raw Tracking Number: tq616878680gb, Processed Tracking Number: None, Weight: 0.5  г, Cost: 830.00 руб., Price: 5.50 $ USD (550.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10215798/
+2025-02-01 21:27:47,731 - INFO - Tracking number submitted: US1-384717V9
+2025-02-01 21:27:50,233 - INFO - Raw Tracking Number: 4201972020699405508105462317268297, Processed Tracking Number: 9405508105462317268297, Weight: 0.6  г, Cost: 996.00 руб., Price: 6.60 $ USD (660.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10150717/
+2025-02-01 21:29:14,710 - INFO - Tracking number submitted: US1-383109V9
+2025-02-01 21:29:16,988 - INFO - Raw Tracking Number: 1221590474510001972000283798573536, Processed Tracking Number: 283798573536, Weight: 1.9  г, Cost: 3154.00 руб., Price: 20.90 $ USD (2090.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10150430/
+2025-02-01 22:39:47,627 - ERROR - Attempt 1/3 failed: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-02-01 22:41:51,295 - ERROR - Attempt 1/3 failed: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-02-01 23:00:50,109 - INFO - Tracking number submitted: US1-275274V9
+2025-02-01 23:00:52,904 - INFO - Raw Tracking Number: 420197209434611105502196303234, Processed Tracking Number: 9434611105502196303234, Weight: 1.2  г, Cost: 1992.00 руб., Price: 13.20 $ USD (1320.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10213249/
+2025-02-01 23:32:59,659 - INFO - Tracking number submitted: US1-383109V9
+2025-02-01 23:33:02,768 - INFO - Raw Tracking Number: 1221590474510001972000283798573536, Processed Tracking Number: 283798573536, Weight: 1.9  г, Cost: 3154.00 руб., Price: 20.90 $ USD (2090.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10150430/
+2025-02-01 23:37:23,365 - INFO - Tracking number submitted: US-259012V9
+2025-02-01 23:37:24,743 - INFO - Raw Tracking Number: 4201972020699400108105463293178584, Processed Tracking Number: 9400108105463293178584, Weight: 0.2  г, Cost: 332.00 руб., Price: 2.20 $ USD (220.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10150721/
+2025-02-01 23:39:25,841 - INFO - Tracking number submitted: US1-290709V9
+2025-02-01 23:39:27,234 - INFO - Raw Tracking Number: 4201972020699400108105463290821315, Processed Tracking Number: 9400108105463290821315, Weight: 0.1  г, Cost: 166.00 руб., Price: 1.10 $ USD (110.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10150727/
+2025-02-01 23:40:13,436 - INFO - Tracking number submitted: US1-233382V9
+2025-02-01 23:40:15,124 - INFO - Raw Tracking Number: C1420197209405536208070303564378, Processed Tracking Number: 9405536208070303564378, Weight: 1.4  г, Cost: 2324.00 руб., Price: 15.40 $ USD (1540.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10188725/
+2025-02-02 00:04:17,144 - INFO - Tracking number submitted: US1-412989V9
+2025-02-02 00:04:19,727 - INFO - Raw Tracking Number: rozabelay9632080170677914238600539474573716, Processed Tracking Number: 539474573716, Weight: 3  г, Cost: 4980.00 руб., Price: 33.00 $ USD (3300.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/9692037/
+2025-02-02 00:05:24,782 - INFO - Tracking number submitted: US1-354337V9
+2025-02-02 00:05:26,452 - INFO - Raw Tracking Number: C14201972020699405508105463262940146, Processed Tracking Number: 9405508105463262940146, Weight: 2.4  г, Cost: 3984.00 руб., Price: 26.40 $ USD (2640.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10113965/
+2025-02-02 00:05:26,485 - INFO - Tracking number submitted: US1-354337V9
+2025-02-02 00:05:27,792 - INFO - Raw Tracking Number: C14201972020699405508105463262940146, Processed Tracking Number: 9405508105463262940146, Weight: 2.4  г, Cost: 3984.00 руб., Price: 26.40 $ USD (2640.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10113965/
+2025-02-02 00:07:04,910 - INFO - Tracking number submitted: US1-383248V9
+2025-02-02 00:07:06,497 - INFO - Raw Tracking Number: 4201972020699434630109355026350086, Processed Tracking Number: 9434630109355026350086, Weight: 0.2  г, Cost: 332.00 руб., Price: 2.20 $ USD (220.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10161356/
+2025-02-02 00:07:10,034 - INFO - Tracking number submitted: US1-383248V9
+2025-02-02 00:07:11,714 - INFO - Raw Tracking Number: 4201972020699434630109355026350086, Processed Tracking Number: 9434630109355026350086, Weight: 0.2  г, Cost: 332.00 руб., Price: 2.20 $ USD (220.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10161356/
+2025-02-02 00:08:58,046 - INFO - Tracking number submitted: US1-287593V9
+2025-02-02 00:09:00,914 - INFO - Raw Tracking Number: C14201972020699400108105462338561909, Processed Tracking Number: 9400108105462338561909, Weight: 0.2  г, Cost: 332.00 руб., Price: 2.20 $ USD (220.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10188139/
+2025-02-02 00:10:06,267 - INFO - Tracking number submitted: US1-212410V9
+2025-02-02 00:10:07,818 - INFO - Raw Tracking Number: C14201972020699434608105463300418230, Processed Tracking Number: 9434608105463300418230, Weight: 0.6  г, Cost: 996.00 руб., Price: 6.60 $ USD (660.00 руб.), Link: https://kz.globbing.com/ru/sale-order/view/10167879/

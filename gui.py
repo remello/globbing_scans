@@ -1,5 +1,6 @@
 import tkinter as tk
 import logging
+import webbrowser
 from tracking_info import finder
 from config import USERNAME, PASSWORD, EXCHANGE_RATE
 from cost_calculator import CostCalculator
@@ -146,6 +147,10 @@ class TrackingApp:
         
         # Копируем трек-номер
         self.copy_tracking_number_to_clipboard()
+        
+        # Открываем ссылку на Яндекс.Почту
+        yandex_mail_url = f"https://mail.yandex.ru/?uid=1911670782#search?request={tracking_number_text}"
+        webbrowser.open(yandex_mail_url)
 
     def _handle_finder_only(self, tracking_number_text):
         """Обработка случая, когда сработал только finder"""
